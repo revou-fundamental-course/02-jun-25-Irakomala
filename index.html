@@ -8,6 +8,13 @@
 
   <!-- CSS External -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Smooth Scroll -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,46 +31,56 @@
     </nav>
   </header>
 
-  <hr/>
+  <hr />
 
   <!-- Main Content -->
   <main>
     <!-- Home Section -->
     <section id="home">
-        <h1>Hi everyone, welcome to my portfolio website.  Im glad youre here!</h1>
-        <p> My name is Ira, and this portfolio is a reflection of my learning journey and creativity.</p>
-
-        <div class="banner-img"></div>
+      <h1>Hi everyone, welcome to my portfolio website. I'm glad you're here!</h1>
+      <p>My name is Ira, and this portfolio is a reflection of my learning journey and creativity.</p>
+      <div class="banner-img"></div>
     </section>
 
-    <hr/>
+    <hr />
 
     <!-- Our Profile Section -->
     <section id="our-profile">
-         <h1>Our Profile</h1>
-         <p>A passionate web developer in the making, exploring HTML, CSS, and JavaScript one step at a time.”</p>
-    </section>    
-
-    <hr/>
-
-    <section id="message-us">
-        <h1>Message Us</h1>
-        <p>Have any questions? Just drop your message here!</p>
-
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br/><br/>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br/><br/>
-
-            <label for="message">Message:</label><br/>
-            <textarea id="message" name="message" rows="4" required></textarea><br/><br/>
-
-            <button type="submit">Send</button>
-        </form>
+      <h1>Our Profile</h1>
+      <p>A passionate web developer in the making, exploring HTML, CSS, and JavaScript one step at a time.</p>
     </section>
 
+    <hr />
+
+    <!-- Message Us Section -->
+    <section id="message-us">
+      <h1>Message Us</h1>
+      <p>Have any questions? Just drop your message here!</p>
+
+      <div class="form-wrapper">
+        <!-- Form -->
+        <form id="contactForm">
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" required><br /><br />
+
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="email" required><br /><br />
+
+           <label for="message">Message:</label><br />
+           <textarea id="message" name="message" rows="4" required></textarea><br /><br />
+
+          <button type="submit">Send</button>
+        </form>   
+
+        <!-- Hasil form tampil disini -->
+        <div class="form-result" id="FormResult">
+           <h3>Your Message</h3>
+           <p><strong>Name:</strong> <span id="resultName"></span></p>
+           <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+           <p><strong>Message:</strong> <span id="resultMessage"></span></p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer Content -->
@@ -72,7 +89,7 @@
   </footer>
 
   <!-- JavaScript -->
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
-</html>  
+</html>

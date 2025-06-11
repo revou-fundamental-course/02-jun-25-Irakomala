@@ -31,7 +31,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   alert(`Anyeong ${name}! 👋\n\nWe’ve received your message:\n"${message}"\n\nWe’ll reach out to ${email} soon!`);
 
   // Beri efek pada kotak hasil pesan
-const formResult = document.getElementById("FormResult");
+const formResult = document.getElementById("formResult");
 formResult.style.border = "2px solid lightgreen";
 formResult.style.boxShadow = "0 0 10px rgba(0,255,0,0.5)";
 formResult.style.transition = "0.4s";
@@ -40,4 +40,36 @@ formResult.style.transition = "0.4s";
 //   Reset atau kosongkan form setelah submit
   this.reset(); 
 });
+
+// Auto Slide Banner
+let currentSlide = 0;
+const slides = document.querySelectorAll('.banner-slider .slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Tampilkan slide pertama & jalankan interval
+showSlide(currentSlide);
+setInterval(nextSlide, 4000); // Ganti slide setiap 4 detik
+
+const dots = document.querySelectorAll('.dot');
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    dots[i].classList.toggle('active', i === index);
+  });
+}
 

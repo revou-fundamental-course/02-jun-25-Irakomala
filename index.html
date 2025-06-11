@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website - Ira</title>
+  <title>My Portfolio Website</title>
   <link rel="icon" href="https://via.placeholder.com/32" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
   
@@ -22,9 +22,17 @@
 <body>
   <!-- Header Content -->
   <header class="main-header">
-    <div class="banner">
-      <img src="https://via.placeholder.com/1200x300?text=Selamat+Datang+di+Halaman+Kami!" alt="Banner Selamat Datang"/>
+    <div class="banner-slider">
+      <img class="slide" src="https://via.placeholder.com/1200x300?text=Selamat+Datang+di+Halaman+Kami!" alt="Banner 1">
+      <img class="slide" src="https://via.placeholder.com/1200x300?text=Explore+My+Portfolio!" alt="Banner 2">
+      <img class="slide" src="https://via.placeholder.com/1200x300?text=Let’s+Connect+and+Learn+Together!" alt="Banner 3">
     </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
 
     <!-- Logo Website -->
     <div class="main-logo"></div>
@@ -81,7 +89,7 @@
         </form>   
 
         <!-- Hasil form tampil disini -->
-        <div class="form-result" id="FormResult">
+        <div class="form-result" id="formResult">
            <h3>Your Message</h3>
            <p><strong>Name:</strong> <span id="resultName"></span></p>
            <p><strong>Email:</strong> <span id="resultEmail"></span></p>
